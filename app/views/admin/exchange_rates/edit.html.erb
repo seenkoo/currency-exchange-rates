@@ -1,0 +1,36 @@
+<h1 class="mb-4"><%= link_to 'CurrencyExchangeRates', root_path %> / <%= link_to 'Admin', admin_path %></h1>
+
+<%= render 'shared/errors', object: @exchange_rate %>
+
+<%= form_with model: [:admin, @exchange_rate] do |f| %>
+  <div class="col-md-8">
+    <div class="card mb-4 box-shadow">
+      <div class="card-header">
+        <h4 class="my-0">USD / RUR</h4>
+      </div>
+      <div class="card-body">
+        <div class="mb-3 row">
+          <div class="col-sm-2 col-form-label">
+            <%= f.label :value %>
+          </div>
+
+          <div class="col-sm-10">
+            <%= f.number_field :value, step: 0.0001, class: 'form-control mb-3' %>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <div class="col-sm-2 col-form-label">
+            <%= f.label :expires_at %>
+          </div>
+
+          <div class="col-sm-10">
+            <%= f.datetime_field :expires_at, class: 'form-control mb-3' %>
+          </div>
+        </div>
+
+        <%= f.submit "Update rates", class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+<% end %>

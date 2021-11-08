@@ -7,6 +7,7 @@ consumer.subscriptions.create("RatesChannel", {
 
   updateRates(data) {
     const element = document.querySelector("[data-channel='rates']")
+    if (!element) return
     element.textContent = data
   }
 });
