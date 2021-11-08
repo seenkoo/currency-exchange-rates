@@ -1,0 +1,13 @@
+<h1 class="mb-4">CurrencyExchangeRates</h1>
+
+<div class="col-md-4">
+  <div class="card mb-4 box-shadow">
+    <div class="card-header">
+      <h4 class="my-0">USD / RUR</h4>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title"><span class="text-muted">$</span>1 / <span class="text-muted">₽</span><span data-channel="rates"><%= @rate %></span></h1>
+      <h4 class="card-subtitle text-muted"><%= Date.today.to_s(:long) %></h4>
+    </div>
+  </div>
+</div>
