@@ -1,0 +1,10 @@
+development:
+  :concurrency: 1
+production:
+  :concurrency: 1
+:queues:
+  - default
+schedule:
+  RatesUpdaterJob:
+    cron: '*/5 * * * *'
+    enabled: true
