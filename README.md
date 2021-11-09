@@ -1,5 +1,7 @@
 # README
 
+https://exchange-rates-rails.herokuapp.com/
+
 Взято с: https://dl.funbox.ru/qt-ruby.pdf
 
 Реализуйте web-приложение (Rails проект), которое удовлетворяет
