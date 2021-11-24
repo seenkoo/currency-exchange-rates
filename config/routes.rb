@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :exchange_rates, only: %i[edit update]
+    resource :exchange_rate, only: %i[edit update]
     get '/', to: 'exchange_rates#edit'
+    get '/exchange_rate', to: 'exchange_rates#edit'
   end
 
   root 'pages#index'
